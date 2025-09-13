@@ -5,6 +5,7 @@ import com.quizApp.quizApp.entity.Questions;
 import com.quizApp.quizApp.entity.Quiz;
 import com.quizApp.quizApp.repository.QuestionsRepository;
 import com.quizApp.quizApp.repository.QuizRepository;
+import com.quizApp.quizApp.request.QuizRequest;
 import com.quizApp.quizApp.service.QuizService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -39,15 +40,37 @@ public class QuizServiceImpl implements QuizService {
     @Override
     public List<QuestionDTO> getQuizQuestion(int id) {
 
-       Quiz quiz = quizRepository.findById(id).orElseThrow(()->new RuntimeException("Id not found"));
-       List<Questions> questionsList = quiz.getQuestionsList();
-       List<QuestionDTO> questionDTOS = new ArrayList<>();
+        Quiz quiz = quizRepository.findById(id).orElseThrow(() -> new RuntimeException("Id not found"));
+        List<Questions> questionsList = quiz.getQuestionsList();
+        List<QuestionDTO> questionDTOS = new ArrayList<>();
 
-       for(Questions q : questionsList){
-           QuestionDTO dto = new QuestionDTO(q.getId(),q.getQuestion(),q.getOption1(),
-                   q.getOption2(),q.getOption3(),q.getOption4());
-           questionDTOS.add(dto);
-       }
+        for (Questions q : questionsList) {
+            QuestionDTO dto = new QuestionDTO(q.getId(), q.getQuestion(), q.getOption1(),
+                    q.getOption2(), q.getOption3(), q.getOption4());
+            questionDTOS.add(dto);
+        }
         return questionDTOS;
     }
+
+    @Override
+    public String submitQuiz(List<QuizRequest> requests, int quizId) {
+        Quiz quiz = quizRepository.findById(quizId).get();
+        List<Questions> questionListOfQuiz = quiz.getQuestionsList();
+        int correctAnswer = 0;
+        for (Questions q : questionListOfQuiz) {
+            for (QuizRequest quizRequest : requests) {
+                if (quizRequest.getQid() == q.getId()) {
+                    if (quizRequest.getOptionList() == q.getCorrect_option()) {
+                        correctAnswer++;
+                    }
+                } else {
+                    //question is not from Quiz
+                }
+            }
+        }
+
+        String msg = "Your score is : " + correctAnswer;
+        return msg;
+        }
+
 }
