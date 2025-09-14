@@ -31,7 +31,7 @@ public class QuizServiceImpl implements QuizService {
         List<Questions> questionsList = quizRepository.findRandomQuestions(noOfQuestions, category);
         quiz.setQuestionsList(questionsList);
         quizRepository.save(quiz);
-        String msg = "Quiz created..";
+        String msg = "Your Quiz is Created..";
         return msg;
     }
 
@@ -40,7 +40,7 @@ public class QuizServiceImpl implements QuizService {
     @Override
     public List<QuestionDTO> getQuizQuestion(int id) {
 
-        Quiz quiz = quizRepository.findById(id).orElseThrow(() -> new RuntimeException("Id not found"));
+        Quiz quiz = quizRepository.findById(id).orElseThrow(() -> new RuntimeException("Id not found" +id));
         List<Questions> questionsList = quiz.getQuestionsList();
         List<QuestionDTO> questionDTOS = new ArrayList<>();
 
@@ -52,6 +52,7 @@ public class QuizServiceImpl implements QuizService {
         return questionDTOS;
     }
 
+    // Method to submit quiz with quiz id and options
     @Override
     public String submitQuiz(List<QuizRequest> requests, int quizId) {
         Quiz quiz = quizRepository.findById(quizId).get();
