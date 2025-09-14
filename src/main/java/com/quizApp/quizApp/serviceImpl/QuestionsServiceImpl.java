@@ -15,6 +15,7 @@ public class QuestionsServiceImpl implements QuestionsService {
     private QuestionsRepository quizRepository;
 
 
+    // Implements method to get list of all questions
     @Override
     public List<Questions> getAllQuestions() {
         List<Questions> questionList = quizRepository.findAll();
