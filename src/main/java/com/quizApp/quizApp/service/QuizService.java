@@ -14,5 +14,6 @@ public interface QuizService {
     // Method to get quiz questions
     List<QuestionDTO> getQuizQuestion(int id);
 
+    // Method to submit quiz
     String submitQuiz(List<QuizRequest> requests , int quizId);
 }
