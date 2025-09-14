@@ -16,6 +16,7 @@ public class QuestionsController {
     @Autowired
     private QuestionsService quizService;
 
+    // Write API to get All Questions from the quiz
     @GetMapping("/getALlQues")
     public ResponseEntity<List<Questions>> getAllQuestions(){
         List<Questions> questionsList = quizService.getAllQuestions();
