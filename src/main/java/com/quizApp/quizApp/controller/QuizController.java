@@ -16,7 +16,7 @@ public class QuizController {
     @Autowired
     private QuizService quizService;
 
-    // To create Quiz
+    // API To create Quiz
     @PostMapping("/CreateQuiz")
     public ResponseEntity<String> createQuiz(@RequestParam int noOfQuestions,
                                              @RequestParam String quizname,
@@ -26,7 +26,7 @@ public class QuizController {
         return new ResponseEntity<>(msg , HttpStatus.CREATED);
     }
 
-    // To get Quiz questions
+    // API To get Quiz questions
     @GetMapping("/getQuiz/{id}")
     public ResponseEntity<List<QuestionDTO>> getQuizQuestions(@PathVariable("id") int id){
         List<QuestionDTO> questionlist = quizService.getQuizQuestion(id);
