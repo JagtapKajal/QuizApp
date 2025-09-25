@@ -26,7 +26,8 @@ public class QuizController {
         return new ResponseEntity<>(msg , HttpStatus.CREATED);
     }
 
-    // API To get Quiz questions
+    // API
+    // To get Quiz questions
     @GetMapping("/getQuiz/{id}")
     public ResponseEntity<List<QuestionDTO>> getQuizQuestions(@PathVariable("id") int id){
         List<QuestionDTO> questionlist = quizService.getQuizQuestion(id);
