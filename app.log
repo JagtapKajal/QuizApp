@@ -1,0 +1,42 @@
+2025-09-13T19:16:24.504+05:30  INFO 3052 --- [quizApp] [main] com.quizApp.quizApp.QuizAppApplication   : Starting QuizAppApplication using Java 23.0.2 with PID 3052 (C:\SpringBoot\quizApp\quizApp\target\classes started by KAJAL in C:\SpringBoot\quizApp\quizApp)
+2025-09-13T19:16:24.518+05:30  INFO 3052 --- [quizApp] [main] com.quizApp.quizApp.QuizAppApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-09-13T19:16:26.209+05:30  INFO 3052 --- [quizApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-09-13T19:16:26.331+05:30  INFO 3052 --- [quizApp] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 100 ms. Found 2 JPA repository interfaces.
+2025-09-13T19:16:27.220+05:30  INFO 3052 --- [quizApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-09-13T19:16:27.235+05:30  INFO 3052 --- [quizApp] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-09-13T19:16:27.236+05:30  INFO 3052 --- [quizApp] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.44]
+2025-09-13T19:16:27.307+05:30  INFO 3052 --- [quizApp] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-09-13T19:16:27.307+05:30  INFO 3052 --- [quizApp] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2598 ms
+2025-09-13T19:16:27.713+05:30  INFO 3052 --- [quizApp] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-09-13T19:16:27.840+05:30  INFO 3052 --- [quizApp] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-09-13T19:16:27.917+05:30  INFO 3052 --- [quizApp] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-09-13T19:16:28.367+05:30  INFO 3052 --- [quizApp] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-09-13T19:16:28.431+05:30  INFO 3052 --- [quizApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-09-13T19:16:29.009+05:30  INFO 3052 --- [quizApp] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fa9692b
+2025-09-13T19:16:29.013+05:30  INFO 3052 --- [quizApp] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-09-13T19:16:29.075+05:30  WARN 3052 --- [quizApp] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-09-13T19:16:29.078+05:30  WARN 3052 --- [quizApp] [main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2025-09-13T19:16:29.106+05:30  INFO 3052 --- [quizApp] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-09-13T19:16:30.172+05:30  INFO 3052 --- [quizApp] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-09-13T19:16:30.289+05:30  INFO 3052 --- [quizApp] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-09-13T19:16:30.739+05:30  INFO 3052 --- [quizApp] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-09-13T19:16:30.943+05:30  WARN 3052 --- [quizApp] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-09-13T19:16:31.017+05:30  INFO 3052 --- [quizApp] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-09-13T19:16:31.686+05:30  INFO 3052 --- [quizApp] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-09-13T19:16:31.701+05:30  INFO 3052 --- [quizApp] [main] com.quizApp.quizApp.QuizAppApplication   : Started QuizAppApplication in 8.098 seconds (process running for 8.84)
+2025-09-13T19:37:00.104+05:30  INFO 3052 --- [quizApp] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-09-13T19:37:00.127+05:30  INFO 3052 --- [quizApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-09-13T19:37:00.234+05:30  INFO 3052 --- [quizApp] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 106 ms
+2025-09-13T19:37:02.287+05:30  INFO 3052 --- [quizApp] [http-nio-8080-exec-9] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 682 ms
+2025-09-13T19:45:43.557+05:30  INFO 3052 --- [quizApp] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-09-13T19:45:43.601+05:30  INFO 3052 --- [quizApp] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-09-13T19:45:43.657+05:30  INFO 3052 --- [quizApp] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-09-13T19:45:43.706+05:30  INFO 3052 --- [quizApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-09-13T19:45:43.725+05:30  INFO 3052 --- [quizApp] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
